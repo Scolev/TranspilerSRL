@@ -57,6 +57,26 @@ public class BaseListenerSRL extends org.abcd.examples.ArrayInit.ArrayInitBaseLi
                temp.append("!=");
                break;
 
+           case("<>"):
+               temp.append("!erLik");
+               break;
+
+           case("<"):
+               if(node.getParent() instanceof ArrayInitParser.Date_blockContext){
+                   temp.append("før");
+               } else {
+                   temp.append("<");
+               }
+               break;
+
+           case(">"):
+               if(node.getParent() instanceof ArrayInitParser.Date_blockContext){
+                   temp.append("etter");
+               } else {
+                   temp.append(">");
+               }
+               break;
+
            default:
                temp.append(caseTest);
                break;
@@ -91,9 +111,14 @@ public class BaseListenerSRL extends org.abcd.examples.ArrayInit.ArrayInitBaseLi
         temp.append('\n');
     }
 
+    @Override public void enterBoold(ArrayInitParser.BooldContext ctx){
+        temp.append('\n');
+    }
+
     @Override public void exitDotchain(ArrayInitParser.DotchainContext ctx){
         temp.append(" ");
     }
+
 
 
 
