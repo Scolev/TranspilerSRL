@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/array-example/pom.xml" />
+        <option value="$PROJECT_DIR$/SRL2Kotlin/pom.xml" />
       </list>
     </option>
   </component>

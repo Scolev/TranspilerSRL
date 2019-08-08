@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="array-init" />
+        <module name="SRL2Kotlin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="array-init" target="1.7" />
+      <module name="SRL2Kotlin" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
