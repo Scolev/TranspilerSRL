@@ -22,7 +22,11 @@ public class BaseListenerSRL extends no.nav.grammar.SRL2Kotlin.SRL2KotlinBaseLis
                 break;
 
             case("and"):
-                temp.append("&&");
+                temp.append("OG{");
+                break;
+
+            case("if"):
+                temp.append("HVIS{");
                 break;
 
             case("<EOF>"):
@@ -100,7 +104,7 @@ public class BaseListenerSRL extends no.nav.grammar.SRL2Kotlin.SRL2KotlinBaseLis
     }
 
     @Override public void exitBoolean_block(SRL2KotlinParser.Boolean_blockContext ctx){
-        temp.append(")"+'\n');
+        temp.append("}"+'\n'+"SÅ");
     }
 
     @Override public void exitAssignment(SRL2KotlinParser.AssignmentContext ctx){
@@ -112,8 +116,11 @@ public class BaseListenerSRL extends no.nav.grammar.SRL2Kotlin.SRL2KotlinBaseLis
     }
 
     @Override public void enterBoold(SRL2KotlinParser.BooldContext ctx){
+        temp.append('}');
         temp.append('\n');
     }
+
+
 
     @Override public void exitDotchain(SRL2KotlinParser.DotchainContext ctx){
         temp.append(" ");

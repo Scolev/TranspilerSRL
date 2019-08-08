@@ -62,7 +62,7 @@ public class SRL2Kotlin {
 
         System.out.println("Original SRL code:");
         System.out.println(input +"" + '\n');
-        System.out.println("Translated code from SRL to Java: ");
+        System.out.println("Translated code from SRL to Kotlin DSL: ");
         System.out.println(listener.temp.toString().trim());
         //System.out.println(tree.toStringTree(parser)); // print LISP-style tree
 
